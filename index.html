@@ -7,8 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    
 </head>
 
 <body>
@@ -26,15 +26,26 @@
             <strong>📅 Próxima edición: 15-17 de noviembre. ¡Reserva tu entrada y únete al multiverso!</strong>
         </div>
 
-        <nav>
-            <strong>Menú de Navegación</strong>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Programación</a></li>
-                <li><a href="#">Círculos Creativos</a></li>
-                <li><a href="#">Galería</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-sm bg-primary navbar-light custom-navbar">
+            <div class="container-fluid">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Programación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Círculos Creativos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
 
         <aside>
@@ -60,10 +71,46 @@
         </main>
 
         <div class="imagenes">
-            <div class="c1">📸 Cosplayers</div>
-            <div class="c2">🖌️ Fan Art</div>
-            <div class="c3">🎨 Mangakas</div>
-            <div class="c4">🎥 Momentos Épicos</div>
+            <div id="carouselCosplay" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/cosplay1.jpg" class="d-block w-100" alt="Cosplayers">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1>📸 Cosplayers</h1>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/cosplay2.jpg" class="d-block w-100" alt="Fan Art">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1>🖌️ Fan Art</h1>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/cosplay3.jpg" class="d-block w-100" alt="Mangakas">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1>🎨 Mangakas</h1>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/cosplay4.jpg" class="d-block w-100" alt="Momentos Épicos">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1>🎥 Momentos Épicos</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselCosplay"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselCosplay"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
         </div>
 
         <footer>
@@ -81,6 +128,7 @@
             </div>
         </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
