@@ -1,0 +1,178 @@
+/* Estilos base (escritorio) */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "extra1 extra1 extra2 extra2"
+    "nav nav nav nav"
+    "aside main main main"
+    "imagenes imagenes imagenes imagenes"
+    "footer footer footer footer";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto 1fr auto auto;
+  gap: 0;
+}
+
+/* Estilos generales para todos los bloques */
+header, nav, aside, main, .imagenes, footer,
+.extra1, .extra2 {
+  border: 1px solid black;
+  padding: 20px;
+  font-family: 'Bangers';
+}
+
+/* Estilos específicos */
+header {
+  grid-area: header;
+  background-color: #da7e34;
+}
+
+.extra1 {
+  grid-area: extra1;
+  background-color: #ffe4b5;
+}
+
+.extra2 {
+  grid-area: extra2;
+  background-color: #fafad2;
+}
+
+nav {
+  grid-area: nav;
+  background-color: #eb0713;
+}
+
+aside {
+  grid-area: aside;
+  background-color: #f0e68c;
+}
+
+.cuadro-aside {
+  background-color: #fff8dc;
+  border: 1px solid black;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f5f5f5;
+}
+
+article {
+  background-color: #f0e68c;
+  padding: 15px;
+  border: 1px solid black;
+}
+
+.imagenes {
+  grid-area: imagenes;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fafad2;
+}
+
+
+
+.imagenes div {
+  background-color: #add8e6;
+  flex: 1;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border: 1px solid black;
+  margin: 0 5px;
+}
+
+.c1 {
+    flex: 1;
+    background-image: url('images/cosplay1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    padding: 50px;
+}
+
+.c2 {
+    background-image: url('images/cosplay2.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    padding: 50px;
+}
+
+.c3 {
+    background-image: url('images/cosplay3.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    padding: 50px;
+}
+
+.c4 {
+    background-image: url('images/cosplay4.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    padding: 50px;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #696969;
+  color: white;
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+}
+
+.footer-box {
+  background-color: #808080;
+  flex: 1;
+  border: 1px solid black;
+  padding: 15px;
+  color: white;
+}
+
+/* 🌐 Estilos responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "extra1"
+      "extra2"
+      "nav"
+      "aside"
+      "main"
+      "imagenes"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .imagenes {
+    flex-direction: column;
+  }
+
+  .imagenes div {
+    margin: 5px 0;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  .footer-box {
+    margin-bottom: 10px;
+  }
+}
